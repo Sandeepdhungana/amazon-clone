@@ -20,12 +20,11 @@ const reducer = (state, action) => {
       const index = state.basket.findIndex(
         (basketItem) => basketItem.id === action.id
       );
-      console.log(index);
       let newBasket = [...state.basket];
       if (index >= 0) {
         newBasket.splice(index, 1);
       } else {
-        console.log(index);
+
         // console.warn(
         //   `Cannot remove the item with item id ${action.id} as it is unavailabe in the basket`
         // );
